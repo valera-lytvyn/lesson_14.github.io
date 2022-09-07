@@ -1,0 +1,124 @@
+.blog {
+   background: #b07bf7;
+   color: $color_f;
+}
+
+.wrap_blog {
+   width: $s_100;
+   display: flex;
+   justify-content: center;
+}
+
+.blog_title {
+      @include font_quality($ff, 90px, 700, 75px);
+  }
+
+.blog_text {
+   @include font_quality($ff, 17px, 300, 25px);
+   margin: 30px 0px 45px;
+}
+
+.data {
+   @include font_quality($ff, 32px, 700, 1);
+   margin-top: -5px;
+}
+
+.mounth {
+   @include font_quality($ff, 21px, 700, 1);
+   text-transform: uppercase;
+   margin-top: 5px;
+}
+
+.name_pic {
+   @include font_quality($ff, 20px, 700, 25px);
+   position: absolute;
+   top: 210px;
+   margin: 0px 20px;
+   text-align: start;
+}
+
+
+.author {
+   @include font_quality($ff, 13px, 300, 1);
+   position: absolute;
+   bottom: 25px;
+   margin: 0px 20px;
+   text-align: start;
+}
+
+
+.button_text {
+   @include font_quality($ff, 20px, 300, 1);
+   text-transform: uppercase;
+}
+
+.picture {
+   min-height: 310px;
+   display: flex;
+   margin: 0px 15px 50px;
+
+   &:hover {
+      filter: drop-shadow(0px 2px 2.5px rgba(0, 0, 0, 0.5));
+   }
+}
+
+.pic_1 {
+   background: url(../img/pic_1.png) no-repeat;
+   background-size: cover;
+   flex: 1;
+}
+
+.pic_2 {
+   background: url(../img/pic_2.png) no-repeat;
+   background-size: cover;
+   flex: 1;
+}
+
+.pic_3 {
+   background: url(../img/pic_3.png) no-repeat;
+   background-size: cover;
+   flex: 1;
+}
+
+.gradient {
+   @include size($s_100, $s_100);
+   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) $s_100);
+   flex: 1;
+   position: relative;
+}
+
+.data_wrap {
+   @include size(60px, 60px);
+   background-color: rgba(38, 38, 38, 0.4);
+   border-radius: 5px;
+   position: absolute;
+   top: 30px;
+   left: 30px;
+
+   &:hover {
+      border-radius: 25%;
+      transition: all 0.5s ease-in;
+      transform: scale(1.5);
+   }
+}
+
+.wrap_button {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 120px;
+}
+
+.red_button {
+   @include size(55px, 200px);
+   background-color: #f72b3b;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+@media (max-width:576px) {
+   .blog_title {
+      font-size: 50px;
+   }
+}

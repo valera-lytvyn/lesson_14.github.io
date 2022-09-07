@@ -1,0 +1,17 @@
+@mixin size($h, $w) {
+   height: ($h);
+   width: ($w);
+}
+
+@mixin font_quality($ff, $fs, $fw, $lh) {
+   font-family: ($ff);
+   font-size: ($fs);
+   font-weight: ($fw);
+   line-height: ($lh);
+}
+
+@mixin min_($h, $w) {
+   min-height: ($h);
+   min-width: ($w);
+}
+

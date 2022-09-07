@@ -1,0 +1,85 @@
+.wrap_we_are {
+  @include size($s_100, $s_100);
+}
+
+.photo_wrap {
+  width: 270px;
+  margin: auto;
+}
+
+.we_are_title {
+  @include font_quality($ffl, 34px, 700, 1);
+  letter-spacing: 5px;
+  color: $color_3c;
+  text-transform: uppercase;
+  margin-top: 110px;
+}
+
+.we_are_text {
+  @include font_quality($ffl, 16px, 300, 24px);
+  color: $color_3c;
+  margin: 60px 0px;
+}
+
+.name_photo {
+  @include font_quality($ffl, 18px, 700, 18px);
+  color: $color_28;
+}
+
+.profession {
+  @include font_quality($ffl, 14px, 300, 1);
+  color: $color_28;
+}
+
+.photo {
+  @include size(270px, 270px);
+  position: relative;
+}
+
+.icon_social {
+  background-color: $color_b;
+  background-size: cover;
+  @include size($s_100, $s_100);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+  opacity: 0;
+}
+
+.logo {
+  @include size(40px, 40px);
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+
+.photo:hover .icon_social {
+  z-index: 2;
+  opacity: 1;
+  transition: all 1.0s ease-in;
+  transform: translate(0px, 220%);
+  border-radius: 5%;
+  background: #2ca6c580;
+  height: 80px;
+}
+
+.fa-brands {
+  @include font_quality($ffl, 25px, 400, 1);
+  color: $color_f;
+  text-decoration: none;
+}
+
+.logo:hover .fa-brands {
+  color: rgb(255, 153, 0);
+  zoom: 150%;
+}
+
+.logo:hover {
+  background-color: rgba(255, 255, 255, 0);
+}

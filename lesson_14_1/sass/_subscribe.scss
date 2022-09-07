@@ -1,0 +1,100 @@
+.subscribe {
+   @include size($s_100, $s_100);
+}
+
+.wrap_subscribe {
+   @include size($s_100, $s_100);
+   background: url(../img/background_subscribe.jpg) center center no-repeat;
+   background-size: contain;
+}
+
+.container {
+   @include size($s_100, 78%);
+}
+
+.main_subscribe {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   min-height: $s_100;
+}
+
+.string {
+   height: 16%;
+   display: flex;
+
+   &:nth-child(2n) {
+      margin: 4% 0;
+   }
+}
+
+
+.subscribe_title {
+   @include font_quality($ff, 40px, 700, 1);
+   color: $color_26;
+}
+
+.subscribe_text {
+   @include font_quality($ff, 17px, 300, 27px);
+   color: $color_26;
+}
+
+.subscribe_user_email {
+   @include size($s_100, $s_100);
+   border: 1px solid $color_26;
+   text-indent: 15px;
+   @include font_quality($ff, 20px, 300, 64px);
+
+   &.placeholder {
+      @include font_quality($ff, 20px, 300, 64px);
+      color: $color_26;
+      text-indent: 15px;
+   }
+}
+
+.subscribe_button {
+   background-color: #96b92c;
+   filter: drop-shadow(0px 2px 2.5px rgba(0, 0, 0, 0.5));
+   @include size($s_100, $s_100);
+}
+
+.wrap_subscribe_button_text {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.subscribe_button_text {
+   @include font_quality($ff, 20px, 300, 64px);
+   color: $color_f;
+   text-align: center;
+}
+
+@media (max-width:992px) {
+   .subscribe {
+      @include size(60%, $s_100);
+   }
+
+   .string {
+      &:nth-child(2n) {
+         height: 140px;
+      }
+   }
+
+}
+
+@media (max-width:768px) {
+   .subscribe_user_email {
+      min-height: 60px;
+   }
+}
+
+@media (max-width:576px) {
+   .main_subscribe {
+      align-items: center;
+   }
+
+   .subscribe_title {
+      font-size: 28px;
+   }
+}

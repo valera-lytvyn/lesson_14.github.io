@@ -1,0 +1,84 @@
+.services {
+   width: $s_100;
+}
+
+.wrapper {
+   background-color: #70beff;
+   @include size($s_100, $s_100);
+   display: flex;
+   justify-content: center;
+   padding: 10% 0 !important;
+}
+
+.container {
+   @include size(78%, $s_100);
+}
+
+.wrap_content {
+   display: flex;
+   @include size($s_100, $s_100);
+}
+
+.column_description {
+   height: $s_100;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.white_cell {
+   display: flex;
+   flex-wrap: nowrap;
+   justify-content: space-between;
+   width: 66.667%;
+   min-height: 100px;
+   margin-bottom: 20px;
+   background-color: $color_f;
+
+   &:hover {
+      filter: drop-shadow(0px 4px 5px rgba(0, 0, 0, 0.5));
+   }
+}
+
+.white_cell_text {
+   color: $color_26;
+   @include font_quality($ff, 20px, 700, 27px);
+   text-align: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 0 9%;
+}
+
+.white_cell_logo {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.background {
+   @include size($s_100, $s_100);
+   min-height: 600px;
+   background: url(../img/tomato.png) $s_100 45% no-repeat;
+   background-size: contain;
+   @include font_quality($ff, 90px, 700, 107px);
+   color: $color_f;
+   text-align: center;
+}
+
+@media (max-width:992px) {
+   .text_services {
+      font-size: 65px;
+   }
+
+   .white_cell {
+      width: 94%;
+   }
+}
+
+@media (max-width:576px) {
+   .background {
+      min-height: 350px;
+   }
+}

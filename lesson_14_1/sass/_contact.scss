@@ -1,0 +1,109 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  width: $s_100;
+}
+
+.wrap_contact {
+  background: url(../img/background_contact.png) no-repeat;
+  background-size: cover;
+  width: $s_100;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact_title {
+  @include font_quality($ff, 90px, 700, 1);
+  color: $color_26;
+  margin: 9% 0 4%;
+}
+
+.contact_text {
+  @include font_quality($ff, 17px, 300, 25px);
+  color: $color_26;
+  margin-bottom: 50px;
+}
+
+.title_address,
+.title_email,
+.title_phone {
+  @include font_quality($ff, 17px, 700, 25px);
+  color: $color_26;
+}
+
+.text_address,
+.text_email,
+.text_phone {
+  @include font_quality($ff, 17px, 300, 25px);
+  color: $color_26;
+}
+
+.cell,
+.line {
+  @include size(50px, 80%);
+  margin-bottom: 20px;
+}
+
+.cell {
+  background: #00c4c4;
+  @include font_quality($ff, 15px, 700, 25px);
+  color: $color_f;
+  text-indent: 15px;
+  opacity: 1;
+
+  &:hover {
+    border-left: 5px solid #355b81;
+  }
+}
+
+.cell::placeholder {
+  color: $color_f;
+  @include font_quality($ff, 15px, 300, 25px);
+  text-indent: 15px;
+
+  &:placeholder-shown {
+    opacity: .3;
+  }
+}
+
+.message {
+  background: #00c4c4;
+  @include font_quality($ff, 15px, 700, 25px);
+  @include size(250px, 80%);
+  color: $color_f;
+  text-indent: 15px;
+  opacity: 1;
+  margin-bottom: 10.5%;
+  position: relative;
+  resize: none;
+
+  &:placeholder {
+    @include font_quality($ff, 15px, 300, 25px);
+    color: $color_f;
+    text-indent: 15px;
+    position: absolute;
+  }
+}
+
+.footer_row {
+  min-height: 100px;
+  height: 10.5%;
+}
+
+.footer {
+  min-height: 100px;
+  height: 10.5%;
+  background: $color_26;
+  color: #b9b9b9;
+  display: flex;
+}
+
+.love {
+  color: #ff2b58;
+}
+
+@media (max-width:576px) {
+  .contact_title {
+    font-size: 50px;
+      }
+}
