@@ -1,8 +1,8 @@
 .gallery {
    @include min_($s_100, $s_100);
-}
 
-.wrapper_gallery {
+
+&.wrapper_gallery {
    background: #ffe92f;
    display: flex;
    flex-direction: column;
@@ -22,13 +22,13 @@
    flex-direction: column;
 }
 
-.gallery_title {
+&_title {
    @include font_quality($ff, 90px, 700, 27px);
    color: $color_26;
    text-align: center;
 }
 
-.gallery_text {
+&_text {
    @include font_quality($ff, 17px, 300, 27px);
    color: $color_26;
    text-align: center;
@@ -69,4 +69,5 @@
    .gallery_title {
       font-size: 60px;
    }
+}
 }
